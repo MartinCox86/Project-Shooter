@@ -22,10 +22,11 @@ public class playerfire : MonoBehaviour {
 				
 			thisbull.transform.position = gameObject.transform.position;
 			thisbull.GetComponent<movebullet>().origin = gameObject.transform.position;
-				
+
+			thisbull.transform.parent = GameObject.Find ("mainMover").transform;
 			Vector2 rot = new Vector2(hoz,vert);
 			
-			Debug.Log("hoz is " +hoz+". and vert is "+vert);
+			//Debug.Log("hoz is " +hoz+". and vert is "+vert);
 			
 			//if(hoz!=0&&vert!=0){
 				
@@ -36,10 +37,10 @@ public class playerfire : MonoBehaviour {
 				float angleDegrees = angleRadians * Mathf.Rad2Deg;
 				
 				if (angleDegrees<0) {
-	     			angleDegrees+=360;
+	     			angleDegrees=angleDegrees+360;
 				}
 				
-				Debug.Log(angleDegrees);
+				//Debug.Log(angleDegrees);
 				
 				Vector3 bulletangle = thisbull.transform.eulerAngles;
 				bulletangle.z = angleDegrees;

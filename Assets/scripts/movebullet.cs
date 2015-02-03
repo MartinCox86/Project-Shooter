@@ -21,10 +21,10 @@ public class movebullet : MonoBehaviour {
 		
 		Vector3 screenpos = maincamera.WorldToScreenPoint(mycurrentposition);
 		
-		if(screenpos.x<0||screenpos.x>maincamera.pixelWidth){
+		if(screenpos.x<-40||screenpos.x>maincamera.pixelWidth+40){
 			Destroy(gameObject);
 		}
-		if(screenpos.y<0||screenpos.y>maincamera.pixelHeight){
+		if(screenpos.y<-40||screenpos.y>maincamera.pixelHeight+40){
 			Destroy(gameObject);
 		}
 		

@@ -7,7 +7,7 @@ public class gamecontrol : MonoBehaviour {
 	public Camera maincamera;
 	public int gamelevel = 1;
 	
-	void Update () {
+	void Start () {
 	
 		startlevel(gamelevel);
 		
