@@ -10,6 +10,7 @@ public class gamecontrol : MonoBehaviour {
 	void Start () {
 	
 		startlevel(gamelevel);
+		//Test
 		
 	}
 	
